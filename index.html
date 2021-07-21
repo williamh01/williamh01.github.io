@@ -1,22 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>   
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>William Hsia</title>
 </head>
-<body>
-    <header id="mainHeader">
-        <h1>Hello, my name is William Hsia</h1>
-        <p class="subheader">Computer Engineering & Computer Science at Northeastern University</p>
-        <p class="attention">Website is work in progess</p>
-    </header>
 
+<body>
+    <div class="container">
+        <header id="mainHeader">
+            <h1>Hello, my name is William Hsia</h1>
+            <p class="subheader">Website is still work in progress</p>
+            <!--<p class="attention">Website is work in progess</p>-->
+        </header>
+
+        <nav class="navbar">
+            <div class="ulbox">
+                <ul>
+                    <li><a href="#mainHeader">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="menubox">
+                <div class="menu"></div>
+            </div>
+        </nav>
+        <section id="about">
+            <h1>About me</h1>
+            <p>I'm a third year at Northeastern Univeristy studying Computer engineering & Computer science. I'm always
+                looking to challenge myself by learn new skills and so, I decided to create this website from scratch
+                with zero knowledge in front-ended development. I have experience in backend development from coding
+                games in Java and Python. Since I'm also majoring in Computer engineering, I worked with cirucuit boards
+                and C++.</p>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <p>Will share pictures with a scroll function </p>
+        </section>
+        <section id="contact">
+            <h1>Contact me</h1>
+            <p>Does not work at the moment</p>
+            <form action="" method="">
+                <div>
+                    <label>Name</label>
+                    <input type="text" name="name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div>
+                    <label>Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <div>
+                    <input type="submit" name="submit" value="Submit">
+                </div>
+                <div>
+                    <a id="github" target="_blank" href="https://github.com/williamh01">github</a>
+                </div>
+            </form>
+        </section>
+
+
+    </div>
+
+    <script
+        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="main.js"></script>
+
+    <footer id="mainFooter">
+        <p>Copyright &copy; 2021 William Hsia</p>
+    </footer>
 
 </body>
+
 </html>
