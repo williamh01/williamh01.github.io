@@ -4,6 +4,7 @@ const scroll = new SmoothScroll('.navbar a[href*="#"]', {
 
 
 const menubutton = document.querySelector('.menubox');
+const menu = document.querySelector('.menu');
 let menuOpen = false;
 menubutton.addEventListener('click', () => {
     if (!menuOpen) {
