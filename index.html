@@ -20,13 +20,15 @@
 
         <nav class="navbar">
             <div class="menubox">
-                <div class="menu"></div>
+                <div class="menucontainer">
+                    <div class="menu"></div>
+                </div>
                 <div class="ulbox">
                     <ul>
-                        <li><a href="#mainHeader">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="home_link"><a href="#mainHeader">Home</a></li>
+                        <li class="about_link"><a href="#about">About</a></li>
+                        <li class="projects_link"><a href="#projects">Projects</a></li>
+                        <li class="contact_link"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +81,8 @@
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Message</label>
-                            <textarea cols="0" rows="7" class="contact_input" placeholder="message" id="message_input"></textarea>
+                            <textarea cols="0" rows="7" class="contact_input" placeholder="message"
+                                id="message_input"></textarea>
                         </div>
 
                         <div>
