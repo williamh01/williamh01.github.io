@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>William Hsia</title>
 </head>
 
@@ -43,29 +44,54 @@
             <h1>Projects</h1>
             <p>Will share pictures with a scroll function </p>
         </section>
+
         <section id="contact">
             <h1>Contact me</h1>
             <p>Does not work at the moment</p>
-            <form action="" method="">
+
+            <div class="contact_container container grid">
                 <div>
-                    <label>Name</label>
-                    <input type="text" name="name">
+                    <div class="contact_information">
+                        <i class="uil uil-phone contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Call me</h3>
+                            <span class="contact_subtitle">567-510-3615</span>
+                        </div>
+                    </div>
+
+                    <div class="contact_information">
+                        <i class="uil uil-envelope contact_icon"></i>
+                        <div>
+                            <h3 class="contact_title">Email</h3>
+                            <span class="contact_subtitle">hsia.w@northeastern.edu</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <label>Email</label>
-                    <input type="email" name="email">
-                </div>
-                <div>
-                    <label>Message</label>
-                    <textarea name="message"></textarea>
-                </div>
-                <div>
-                    <input type="submit" name="submit" value="Submit">
-                </div>
-                <div>
-                    <a id="github" target="_blank" href="https://github.com/williamh01">github</a>
-                </div>
-            </form>
+
+                <form action="" class="contact_form">
+                    <div class="contact_inputs">
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Name</label>
+                            <input type="text" class="contact_input">
+                        </div>
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Email</label>
+                            <input type="email" class="contact_input">
+                        </div>
+                        <div class="contact_content">
+                            <label for="" class="contact_label">Message</label>
+                            <textarea cols="0" rows="7" class="contact_input"></textarea>
+                        </div>
+
+                        <div>
+                            <a href="#" class="button button--flex">
+                                Send <i class="uil uil-message button_icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
         </section>
 
 
