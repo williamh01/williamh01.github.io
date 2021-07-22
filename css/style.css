@@ -19,28 +19,33 @@ body {
     position: fixed;
     top: 0;
     z-index: 1;
-    display: flex;
-    width: 100%;
-    
 }
 
 .ulbox {
-    width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    transform: translateX(-1000px);
+    transition: all 1s;
 }
 
+.menubox.open .ulbox {
+    transform: translateX(0);
+    opacity: 1;
+}
 
 .navbar ul{
     display: flex;
     list-style: none;
-    margin-top: 0;
-    padding-top: 10px;
-    height: 50px;
     background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    height: 50px;
+    width: 100%;
     justify-content: center;
 }
 
 .navbar ul li {
-    margin: 0 1rem;
+    margin: 0 auto;
     padding: 0.5em;
 }
 
@@ -50,10 +55,6 @@ body {
     text-transform: uppercase;
     font-size: 1.3rem;
     color: #f4f4f4;
-}
-
-.menubox.open .navbar::after {
-    background: transparent;
 }
 
 
@@ -170,16 +171,17 @@ section p {
     position: fixed;
     width: 45px;
     height: 40px;
-    right: 5px;
+    left: 5px;
     top: 7px;
     /*border: 3px solid black;*/
     transition: all .5s ease-in-out;
 }
 
+
 .menu {
-    position: fixed;
+    position: inherit;
     top: 27px;
-    right: 14px;
+    left: 14px;
     width: 33px;
     height: 4px;
     background-color: white;
@@ -192,9 +194,8 @@ section p {
 .menu::after {
     transition: all .5s ease-in-out;
     content: "";
-    position: fixed;
-    top: 27px;
-    right: 14px;
+    position: absolute;
+    right: .1px;
     width: 33px;
     height: 4px;
     background-color: white;
@@ -216,14 +217,14 @@ section p {
 .menubox.open .menu::before {
     transition: .5s ease-in-out;
     transform: rotate(45deg);
-    /*transform: rotate(45deg) translate(27px, -65px);*/
 }
 
 .menubox.open .menu::after {
     transition: .5s ease-in-out;
     transform: rotate(-45deg);
-    /*transform: rotate(-45deg) translate(65px, 27px);*/
 }
+
+
 
 
 #contact {
