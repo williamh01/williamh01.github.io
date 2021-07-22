@@ -68,25 +68,25 @@
                     </div>
                 </div>
 
-                <form action="" class="contact_form">
+                <form class="contact_form" method="POST">
                     <div class="contact_inputs">
                         <div class="contact_content">
                             <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
+                            <input type="text" class="contact_input" placeholder="name" id="name_input">
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
+                            <input type="email" class="contact_input" placeholder="email" id="email_input">
                         </div>
                         <div class="contact_content">
                             <label for="" class="contact_label">Message</label>
-                            <textarea cols="0" rows="7" class="contact_input"></textarea>
+                            <textarea cols="0" rows="7" class="contact_input" placeholder="message" id="message_input"></textarea>
                         </div>
 
                         <div>
-                            <a href="#" class="button button--flex">
+                            <button class="button" type="submit">
                                 Send <i class="uil uil-message button_icon"></i>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -99,7 +99,9 @@
 
     <script
         src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="main.js"></script>
+
 
     <footer id="mainFooter">
         <p>Copyright &copy; 2021 William Hsia</p>
