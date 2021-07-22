@@ -4,21 +4,33 @@ const scroll = new SmoothScroll('.navbar a[href*="#"]', {
 
 
 const menubutton = document.querySelector('.menubox');
-const menu = document.querySelector('.menu');
+const menu = document.querySelector('.menucontainer');
 let menuOpen = false;
-menubutton.addEventListener('click', () => {
-    if (!menuOpen) {
-        menubutton.classList.add('open');
-        menuOpen = true;
-    } else {
-        menubutton.classList.remove('open');
-        menuOpen = false;
-    }
-});
+
+const menuhome = document.querySelector('.home_link');
+const menuabout = document.querySelector('.about_link');
+const menuprojects = document.querySelector('.projects_link');
+const menucontact = document.querySelector('.contact_link');
+
+function navListener(e) {
+    e.addEventListener('click', () => {
+        if (!menuOpen) {
+            menubutton.classList.add('open');
+            menuOpen = true;
+        } else {
+            menubutton.classList.remove('open');
+            menuOpen = false;
+        }
+    });
+}
+navListener(menu);
+navListener(menuhome);
+navListener(menuabout);
+navListener(menuprojects);
+navListener(menucontact);
 
 
 document.querySelector('.contact_form').addEventListener('submit', submitForm);
-
 function submitForm(e) {
     e.preventDefault();
 
