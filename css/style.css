@@ -293,8 +293,9 @@ section p {
     color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 1em 2em;
-    border: #fff 1px solid;
+    border: black 1px solid;
     margin-top: 10px;
+    cursor: pointer;
 }
 
 
