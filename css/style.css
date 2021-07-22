@@ -27,7 +27,9 @@ body {
     opacity: 0;
     transform: translateX(-1000px);
     transition: all 1s;
+    pointer-events: none;
 }
+
 
 .menubox.open .ulbox {
     transform: translateX(0);
@@ -56,6 +58,10 @@ body {
     text-transform: uppercase;
     font-size: 1.3rem;
     color: #f4f4f4;
+    padding: 8px 10px;
+    margin: 0;
+    z-index: 2;
+    pointer-events:all;
 }
 
 
@@ -63,6 +69,73 @@ body {
 
 .navbar ul li a:hover {
     color: skyblue;
+}
+
+
+.menubox {
+    display: flex;
+    position: fixed;
+    width: 45px;
+    height: 40px;
+    left: 5px;
+    top: 7px;
+    transition: all .5s ease-in-out;
+}
+
+.menucontainer {
+    position: inherit;
+    left: 5px;
+    top: 7px;
+    width: 45px;
+    height: 40px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.menu {
+    position: inherit;
+    top: 27px;
+    left: 14px;
+    width: 33px;
+    height: 4px;
+    background-color: white;
+
+    transition: all .5s ease-in-out;
+}
+
+
+
+.menu::before, 
+.menu::after {
+    transition: all .5s ease-in-out;
+    content: "";
+    position: absolute;
+    right: .1px;
+    width: 33px;
+    height: 4px;
+    background-color: white;
+}
+
+.menu::before {
+    transform: translateY(-10px);
+}
+
+.menu::after {
+    transform: translateY(10px);
+}
+
+.menubox.open .menu {
+    background: transparent;
+}
+
+.menubox.open .menu::before {
+    transition: .5s ease-in-out;
+    transform: rotate(45deg);
+}
+
+.menubox.open .menu::after {
+    transition: .5s ease-in-out;
+    transform: rotate(-45deg);
 }
 
 
@@ -167,64 +240,6 @@ section p {
 
 
 
-.menubox {
-    cursor: pointer;
-    display: flex;
-    position: fixed;
-    width: 45px;
-    height: 40px;
-    left: 5px;
-    top: 7px;
-    /*border: 3px solid black;*/
-    transition: all .5s ease-in-out;
-}
-
-
-.menu {
-    position: inherit;
-    top: 27px;
-    left: 14px;
-    width: 33px;
-    height: 4px;
-    background-color: white;
-
-    transition: all .5s ease-in-out;
-
-}
-
-.menu::before, 
-.menu::after {
-    transition: all .5s ease-in-out;
-    content: "";
-    position: absolute;
-    right: .1px;
-    width: 33px;
-    height: 4px;
-    background-color: white;
-}
-
-.menu::before {
-    transform: translateY(-10px);
-}
-
-.menu::after {
-    transform: translateY(10px);
-}
-
-.menubox.open .menu {
-    /*transform: translate(-50px);*/
-    background: transparent;
-}
-
-.menubox.open .menu::before {
-    transition: .5s ease-in-out;
-    transform: rotate(45deg);
-}
-
-.menubox.open .menu::after {
-    transition: .5s ease-in-out;
-    transform: rotate(-45deg);
-}
 
 
 
