@@ -57,3 +57,43 @@ function sendEmail(name, email, message) {
     }).then((message) => alert("mail sent successfully"));
 
 }
+
+
+
+const flightpath = {
+    curviness: 1,
+    autoRotate: true,
+    values: [
+        { x: -50, y: 0 },
+        { x: 900, y: 200 },
+        { x: 700, y: 50 },
+        { x: -100, y: 350 },
+        { x: 200, y: 300 }
+        /*
+        {x:10, y: 200},
+        {x:100, y: 500},
+        {x:500, y: 50},
+        {x:window.innerWidth - (window.innerWidth / 3), y: 500}*/
+    ]
+}
+
+const tween = new TimelineLite();
+
+tween.add(
+    TweenLite.to('.plane_smoke', 3, {
+        bezier: flightpath,
+        ease: Power1.easeInOut
+    })
+);
+
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+    triggerElement: '#mainHeader',
+    duration: 3000
+})
+    .setTween(tween)
+    .addIndicators()
+    .addTo(controller);
+
+
