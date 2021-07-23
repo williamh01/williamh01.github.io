@@ -271,7 +271,6 @@ section p {
 }
 
 .plane_smoke {
-    border: #333 2px solid;
     width: 100px;
     z-index: 6;
 }
