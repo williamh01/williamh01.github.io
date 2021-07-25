@@ -250,7 +250,7 @@ body {
     }
 
     #mainHeader h1::before {
-        animation: typer calc(var(--speed) - 3.2s) 1.5s steps(var(--steps)) forwards;
+        animation: typer calc(var(--speed) - 3.1s) 1.5s steps(var(--steps)) forwards;
     }
 }
 
