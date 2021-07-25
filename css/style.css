@@ -15,10 +15,10 @@ body {
     place-content: center;
     text-align: center;
     /*background-color: var(--bgcolor);*/
-    background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-
+/*------------------------- navbar------------------------------*/
 .navbar {
     position: fixed;
     top: 0;
@@ -143,13 +143,15 @@ body {
 }
 
 
+/*------------------------- mainHeader ------------------------------*/
 #mainHeader {
     padding-top: 300px;
     width: 100%;
+    padding-bottom: 200px;
 }
 
 #mainHeader h1{
-    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-size: clamp(1rem, 2.5vw + 1rem, 5rem);
     position: relative;
     font-family: monospace;
     width: max-content;
@@ -169,17 +171,17 @@ body {
 }
 
 #mainHeader h1::before {
-    background:#ececea;
-    /*background-image: linear-gradient(#cfd9df 0%, #e2ebf0 100%);*/
-    animation: typer var(--speed) steps(var(--steps)) 1s forwards;
+    background:#b5e2f8;
+    animation: typer calc(var(--speed) - 2.8s) 1.5s steps(var(--steps)) forwards;
     z-index: 4;
 }
 
+/*
 #mainHeader h1::after {
     width: 0.125em;
     background-color: black;
-    animation: typer var(--speed) steps(var(--steps)) 1s forwards, blink 750ms steps(30) 100ms infinite;
-}
+    animation: typer var(--speed) steps(var(--steps)) 1s forwards;
+}*/
 
 @keyframes typer {
     to {
@@ -187,13 +189,117 @@ body {
     }
 }
 
-@keyframes blink {
+
+/*------------------------- cloud animation ------------------------------*/
+
+.cloud_container {
+    position: absolute;
+    overflow: hidden;
+    top: 17.5rem;
+    width: 100%;
+    display: flex;
+
+}
+
+.cloud_float {
+    animation: floating_cloud 3s infinite alternate;
+    z-index: 11;
+}
+
+.cloud1 {
+    display:inline;
+    position:relative;
+    width:100%;
+    /*max-width: clamp(1rem, 42vw, 21rem);*/
+    max-width: clamp(10rem, 20vw, 21rem);
+    right: clamp(10rem, 30vw, 20rem);
+    animation: covering_cloud calc(var(--speed) + 2.5s) forwards ease-out;
+    z-index: 11;
+}
+
+
+
+@keyframes floating_cloud {
+    from { transform: translate(2px,  0px); }
+    65%  { transform: translate(0px, 7px); }
+    to   { transform: translate(-2px, 0px); }    
+}
+
+@keyframes covering_cloud {
     to {
-        background: transparent;
+        transform: translateX(clamp(40rem, 200vw, 575%));
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width:810px) {
+.cloud_container {
+    top: 18.5rem;
+}
+
+    .cloud1 {
+        animation: covering_cloud;
+        animation-duration: calc(var(--speed) + 3s);
+        animation-fill-mode: forwards;
+        transition: all ease-out;
+    }      
+
+    @keyframes covering_cloud {
+        to {
+            transform: translateX(clamp(70rem, 200vw, 590%));
+        }
+    }
+
+    #mainHeader h1::before {
+        animation: typer calc(var(--speed) - 3.2s) 1.5s steps(var(--steps)) forwards;
     }
 }
 
 
+@media screen and (max-width:809px) and (min-width:675px) {
+    .cloud_container {
+        top: 18.4rem;
+    }
+    #mainHeader h1::before {
+        animation: typer calc(var(--speed) - 3.2s) 1.5s steps(var(--steps)) forwards;
+    }
+}
+
+@media screen and (max-width:674px) and (min-width:560px) {
+    .cloud_container {
+        top: 18.3rem;
+    }
+    .cloud1 {
+        animation-duration: calc(var(--speed) + 7.05s);
+    }
+    #mainHeader h1::before {
+        animation: typer calc(var(--speed) - 2.05s) 1.5s steps(var(--steps)) forwards;
+    }
+}
+
+@media screen and (max-width:559px) {
+    .cloud_container {
+        top: 18rem;
+    }
+    .cloud1 {
+        animation-duration: calc(var(--speed) + 7s);
+    }
+    #mainHeader h1::before {
+        animation: typer calc(var(--speed) - 2.5s) 1.5s steps(var(--steps)) forwards;
+    }
+}
+
+.cloud2 {
+    position:absolute;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    max-width: clamp(1rem, 42vw, 21rem);
+    z-index: 0;
+    animation: floating_cloud 3s infinite alternate;
+}
+
+
+/*------------------------- subheader ------------------------------*/
 .subheader {
     color: #333;
     font-size: 2rem;
@@ -204,6 +310,7 @@ body {
     opacity: 0;
     transform: translateY(3rem);
     animation: fadein 2s ease var(--speed) forwards;
+    z-index: var(--zindex);
 }
 
 @keyframes fadein {
@@ -220,6 +327,7 @@ body {
     margin-top: 1000px;
 }*/
 
+/*------------------------- sections ------------------------------*/
 .container {
     width: 100%;
     height: 100%;
@@ -248,7 +356,7 @@ section p {
 }
 
 
-
+/*------------------------- rocket animation ------------------------------*/
 .animation {
     position:fixed;
     overflow:hidden;
@@ -420,7 +528,7 @@ section p {
 
 
 
-
+/*------------------------- contact ------------------------------*/
 .contact_container {
     row-gap: 3rem;
     background-color: var(--contact-bgcolor);
@@ -508,15 +616,30 @@ section p {
     text-align: center;
 }
 
+/*
+@media screen and (max-width:1300px) {
+    body {
+        overflow-x: hidden;
+    }
 
+    .cloud_container {
+        top: 16.5rem;
+    }
 
+    @keyframes covering_cloud {
+        to {
+            transform: translateX(420%);
+        }
+    }
+}*/
 
 /*
+
 @media screen and (max-width: 768px) {
 body {
     overflow-x: hidden;
 }
-
+/*
    .navbar ul {
        position: absolute;
        right: 0px;
@@ -541,8 +664,22 @@ body {
 
    .navbar-active {
        transform: translateX(0%);
+   }*/
+/*
+   #mainHeader h1 {
+       /*font-size: 2.5em;*/
+       /*
    }
+   
+
+   .cloud1 {
+    max-width: 35%;
+    left: -2%;
+    top: 17.6rem;
 }
-*/
+
+}
+
+
 
 
