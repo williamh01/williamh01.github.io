@@ -1,36 +1,38 @@
-const scroll = new SmoothScroll('.navbar a[href*="#"]', {
-    speed: 700
-});
-
-
-const menubutton = document.querySelector('.menubox');
-const menu = document.querySelector('.menucontainer');
-let menuOpen = false;
-
-const menuhome = document.querySelector('.home_link');
-const menuabout = document.querySelector('.about_link');
-const menuprojects = document.querySelector('.projects_link');
-const menucontact = document.querySelector('.contact_link');
-
-function navListener(e) {
-    e.addEventListener('click', () => {
-        if (!menuOpen) {
-            menubutton.classList.add('open');
-            menuOpen = true;
-        } else {
-            menubutton.classList.remove('open');
-            menuOpen = false;
-        }
-    });
+let toggle = document.querySelector('.toggle');
+let top_bar = document.querySelector('.top_bar');
+let navigation = document.querySelector('.navigation');
+let main = document.querySelector('.main');
+toggle.classList.add('active');
+top_bar.classList.add('active');
+navigation.classList.add('active');
+main.classList.add('active');
+toggle.onclick = function () {
+    toggle.classList.toggle('active');
+    top_bar.classList.toggle('active');
+    navigation.classList.toggle('active');
+    main.classList.toggle('active');
 }
-navListener(menu);
-navListener(menuhome);
-navListener(menuabout);
-navListener(menuprojects);
-navListener(menucontact);
+
+function toggleMenu() {
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    navigation.classList.remove('active');
+    main.classList.remove('active');
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector('.top_bar').classList.remove('hide')
+    } else {
+        document.querySelector('.top_bar').classList.add('hide')
+    }
+    prevScrollpos = currentScrollPos;
+};
 
 
-document.querySelector('.contact_form').addEventListener('submit', submitForm);
+document.querySelector('.contactForm').addEventListener('submit', submitForm);
 function submitForm(e) {
     e.preventDefault();
 
@@ -57,42 +59,3 @@ function sendEmail(name, email, message) {
     }).then((message) => alert("mail sent successfully"));
 
 }
-
-
-
-const flightpath = {
-    curviness: 1,
-    autoRotate: true,
-    values: [
-        { x: -50, y: 0 },
-        { x: 900, y: 200 },
-        { x: 700, y: 50 },
-        { x: -100, y: 350 },
-        { x: 200, y: 300 }
-        /*
-        {x:10, y: 200},
-        {x:100, y: 500},
-        {x:500, y: 50},
-        {x:window.innerWidth - (window.innerWidth / 3), y: 500}*/
-    ]
-}
-
-const tween = new TimelineLite();
-
-tween.add(
-    TweenLite.to('.plane_smoke', 3, {
-        bezier: flightpath,
-        ease: Power1.easeInOut
-    })
-);
-
-const controller = new ScrollMagic.Controller();
-
-const scene = new ScrollMagic.Scene({
-    triggerElement: '#mainHeader',
-    duration: 3000
-})
-    .setTween(tween)
-    .addTo(controller);
-
-
