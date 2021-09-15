@@ -5,150 +5,240 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>William Hsia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--Balsamiq Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+
+    <!--Arvo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <header id="mainHeader">
-            <h1>Hello! My name is William Hsia</h1>
-            <div class="cloud_container">
-                <div class="cloud_float">
-                    <img class="cloud1" src="images/cloud1.png" alt="cloud1">
-                </div>
-            </div>
-            <div class="wind_container"></div>
-            <div class="subheader_container">
-                <p class="subheader">Website is still work in progress</p>
-            </div>
-
-            <img class="cloud2" src="images/cloud2.png" alt="cloud2">
-        </header>
-
-        <nav class="navbar">
-            <div class="menubox">
-                <div class="menucontainer">
-                    <div class="menu"></div>
-                </div>
-                <div class="ulbox">
-                    <ul>
-                        <li class="home_link"><a href="#mainHeader">Home</a></li>
-                        <li class="about_link"><a href="#about">About</a></li>
-                        <li class="projects_link"><a href="#projects">Projects</a></li>
-                        <li class="contact_link"><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="animation">
-            <div class="animation_container">
-                <div class="plane_smoke">
-                    <img class="paper_plane" src="images/rocket2.png" alt="paper_plane">
-                    <div class="smoke">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="platform"></div>
-            </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#skills" onclick="toggleMenu();">Skills</a></li>
+                <li><a href="#project" onclick="toggleMenu();">Project</a></li>
+                <li><a href="#testimonials" onclick="toggleMenu();">Testimonials</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+                <a href="#" class="btn">Resume</a>
+            </ul>
         </div>
 
-        <section id="about">
-            <h1>About me</h1>
-            <p>I'm a third year at Northeastern Univeristy studying Computer engineering & Computer science. I'm always
-                looking for a challenge and so, I decided to create this website from scratch
-                with zero knowledge in front-ended development. I have experience in back-end development from coding
-                games in Java and Python. Since I'm also majoring in Computer engineering, I worked with circuit boards.
-                and C++.</p>
-        </section>
-        <section id="projects">
-            <h1>Projects</h1>
-            <p>Will share pictures with a scroll function </p>
-        </section>
+        <div class="main">
+            <div class="top_bar">
+                <a href="#" class="logo">WH</a>
+                <div class="toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
 
-        <section id="contact">
-            <h1>Contact me</h1>
+            <!--banner-->
+            <section class="banner" id="banner">
+                <div class="content">
+                    <!--
+                    <div class="imgBox">
+                        <img src="images/user.jpg">
+                    </div>-->
+                    <h4>Hello, my name is </h4>
+                    <h1>William Hsia</h1>
+                    <p>Get to know <a href="#about">me</a> and learn about my <a href="#project">projects</a>.</p>
+                    <h3><a href="#contact">Get in touch!</a></h3>
+                    <ul class="socialMedia">
+                        <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(217, 195, 166,0.7)" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(217, 195, 166,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(217, 195, 166,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(217, 195, 166)" />
+                    </g>
+                </svg>
+            </div>
 
-            <div class="contact_container container grid">
-                <div>
-                    <div class="contact_information">
-                        <i class="uil uil-phone contact_icon"></i>
-                        <div>
-                            <h3 class="contact_title">Call me</h3>
-                            <span class="contact_subtitle">567-510-3615</span>
+
+            <!--about-->
+            <section class="about adjust" id="about">
+                <div class="title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="content">
+                    <div class="textBox">
+                        <p>I'm a third year student at Northeastern University studying Computer Engineering and
+                            Computer Science. I've decided to pursue this major because I always wanted to know more
+                            about computers and what better way than to know both embedded and software.
+                            <br><br>Technologies I've worked with so far are listed <a href="#skills">below</a> and some
+                            honorable mentions
+                            are: LTspice, AutoCAD, and SolidWorks.
+                            <br><br>
+                            Currently, I'm taking algorithms, logic and computation, and database design. My main goal
+                            right now is to learn a vast array of skills and see what fits me the best. Wether it would
+                            be testing, research and Development or engineering, I am open to all!
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <img src="images/me.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <img src="images/wave-haikei.png" class="section_wave">
+
+            <!--skills-->
+            <section class="skills adjust" id="skills">
+                <div class="title">
+                    <h2>Skills</h2>
+                    <p>Embedded and Software</p>
+                </div>
+                <div class="content">
+                    <div class="skillBox">
+                        <img src="images/java.png">
+                        <h2>Java</h2>
+                        <p>Object oriented programming</p>
+                    </div>
+                    <div class="skillBox">
+                        <img src="images/web-design.png">
+                        <h2>Web Development</h2>
+                        <p>HTML, CSS, Javascript</p>
+                    </div>
+                    <div class="skillBox">
+                        <img src="images/javascript.png">
+                        <h2>Javascript</h2>
+                        <p>some</p>
+                    </div>
+                    <div class="skillBox">
+                        <img src="images/c.png">
+                        <h2>C++</h2>
+                        <p>For circuits</p>
+                    </div>
+                    <div class="skillBox">
+                        <img src="images/python 48.png">
+                        <h2>Python</h2>
+                        <p>first language</p>
+                    </div>
+                    <div class="skillBox">
+                        <img src="images/mysql.png">
+                        <h2>MySQL</h2>
+                        <p>Database design</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--projects-->
+            <section class="project adjust" id="project">
+                <div class="title">
+                    <h2>Recent Work</h2>
+                    <p>source code on github</p>
+                </div>
+                <div class="content">
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/website.png" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>Personal Website</h3>
+                            <p>hi</p>
                         </div>
                     </div>
-
-                    <div class="contact_information">
-                        <i class="uil uil-envelope contact_icon"></i>
-                        <div>
-                            <h3 class="contact_title">Email</h3>
-                            <span class="contact_subtitle">hsia.w@northeastern.edu</span>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/GUIscreenshot.jpg" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>Image Processing</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/freecell.png" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>Freecell</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/mazedfs.jpg" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>Maze</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/floodit.png" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>FloodIt</h3>
+                        </div>
+                    </div>
+                    <div class="workBox">
+                        <div class="imgBox">
+                            <img src="images/tetris.jpg" alt="">
+                        </div>
+                        <div class="textBox">
+                            <h3>Tetris</h3>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <form class="contact_form" method="POST">
-                    <div class="contact_inputs">
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input" placeholder="name" id="name_input">
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input" placeholder="email" id="email_input">
-                        </div>
-                        <div class="contact_content">
-                            <label for="" class="contact_label">Message</label>
-                            <textarea cols="0" rows="7" class="contact_input" placeholder="message"
-                                id="message_input"></textarea>
-                        </div>
-
-                        <div>
-                            <button class="button" type="submit">
-                                Send <i class="uil uil-message button_icon"></i>
-                            </button>
-                        </div>
+            <!--Contact-->
+            <section class="contact adjust" id="contact">
+                <div class="title">
+                    <h2>Contact</h2>
+                    <p>Send me a message</p>
+                </div>
+                <div class="contactForm" method="POST">
+                    <div class="row">
+                        <input type="text" placeholder="Name" id="name_input">
                     </div>
-                </form>
+                    <div class="row">
+                        <input type="text" placeholder="Email" id="email_input">
+                    </div>
+                    <div class="row2">
+                        <textarea placeholder="Message" id="message_input"></textarea>
+                    </div>
+                    <div class="row2">
+                        <button class="button" type="submit" value="Send">Send</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!--copyright-->
+            <div class="copyright">
+                <p>Copyright &copy; all rights reserved</p>
             </div>
 
-        </section>
-
-
+        </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.4/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.4/plugins/debug.addIndicators.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.4/plugins/animation.gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TimelineLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/CSSPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/BezierPlugin.min.js"></script>
-
-
-    <script
-        src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
     <script src="main.js"></script>
-
-
-
-    <footer id="mainFooter">
-        <p>Copyright &copy; 2021 William Hsia</p>
-    </footer>
 
 </body>
 
