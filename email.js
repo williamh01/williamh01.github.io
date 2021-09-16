@@ -6,10 +6,13 @@ function submitForm(e) {
     let name = document.getElementById("name_input").value;
     let email = document.getElementById("email_input").value;
     let message = document.getElementById("message_input").value;
-    console.log(name, email, message);
-    document.querySelector('.contactForm').reset();
-
-    sendEmail(name, email, message);
+    
+    if (email.includes("@")) {
+        document.querySelector('.contactForm').reset();
+        sendEmail(name, email, message);
+    } else {
+        alert("Invalid Email");
+    }
 }
 
 
