@@ -41,7 +41,7 @@ function submitForm(e) {
     let email = document.getElementById("email_input").value;
     let message = document.getElementById("message_input").value;
     console.log(name, email, message);
-    document.querySelector('.contact_form').reset();
+    document.querySelector('.contactForm').reset();
 
     sendEmail(name, email, message);
 }
