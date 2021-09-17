@@ -12,7 +12,7 @@
     --white: #fff;
     --white2: #fff;
     --main_background: #EAE7DC;
-    --about_background: rgb(217, 195, 166);
+    --about_background: #d9c3a6;
 }
 
 body {
@@ -378,7 +378,7 @@ section {
 }
 
 .skills.adjust {
-    margin-bottom: -200px;
+    margin-bottom: -400px;
 }
 
 .skills .content {
@@ -418,6 +418,18 @@ section {
 .skills .content .skillBox p {
     text-align: center;
 }
+
+
+.section_wave2 {
+    position:relative; 
+    width: 100%;
+    height: 300px; 
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    top: 10px;
+}
+
 
 .project.adjust {
     background: var(--about_background);
@@ -484,8 +496,16 @@ section {
 }
 
 .project .content .workBox .textBox p {
+    margin: 10px 20px;
     color: #fff;
     font-size: 1em;
+}
+
+.project .content .workBox .textBox h4 {
+    color: #fff;
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
 }
 
 
@@ -505,6 +525,7 @@ section {
     width: 100%;
     max-width: 700px;
     margin-top: 20px;
+    
 }
 
 .contact .contactForm .row {
@@ -513,6 +534,7 @@ section {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
     margin-top: 20px;
+    border-radius: 5%;
 }
 
 .contact .contactForm .row2 {
@@ -521,6 +543,7 @@ section {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    border-radius: 5%;
 }
 
 .contact .contactForm .row input, .contact .contactForm .row2 textarea {
@@ -532,6 +555,7 @@ section {
     background: var(--white);
     font-size: 16px;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 5%;
 }
 
 .contact .contactForm .row2 textarea {
