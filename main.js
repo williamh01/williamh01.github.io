@@ -23,7 +23,7 @@ function toggleMenu() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos >= currentScrollPos) {
         document.querySelector('.top_bar').classList.remove('hide')
     } else {
         document.querySelector('.top_bar').classList.add('hide')
