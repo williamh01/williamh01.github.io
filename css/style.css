@@ -432,7 +432,9 @@ section {
 
 
 .project.adjust {
-    background: var(--about_background);
+    /*background: var(--about_background);*/
+    background: rgb(234,231,220);
+    background: linear-gradient(0deg, rgba(234,231,220,1) 17%, rgba(217,195,166,1) 35%);
 }
 
 .project .content {
